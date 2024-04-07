@@ -13,5 +13,8 @@ reports
 .coverage
 __pycache__
 dist/
+build/
+
+*.sqlite3
 
 .idea

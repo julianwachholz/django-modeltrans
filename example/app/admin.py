@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from modeltrans.admin import ActiveLanguageMixin
+from modeltrans.admin import ActiveLanguageMixin, TabbedLanguageMixin
 
 from .models import Blog, Category
 from .utils import disable_admin_login
@@ -30,5 +30,5 @@ class DefaultCategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Category)
-class CategoryAdmin(ActiveLanguageMixin, admin.ModelAdmin):
+class CategoryAdmin(TabbedLanguageMixin, admin.ModelAdmin):
     pass
